@@ -22,9 +22,12 @@ class MainActivity : AppCompatActivity() {
     */
     private fun rollDice() {
         val dice = Dice(6)
-        val diceRoll = dice.roll()
+        val diceRoll1 = dice.roll()
+        val diceRoll2 = dice.roll()
+
         // imageview of dice
-        val diceImage : ImageView = findViewById(R.id.dice_imageView_1)
+        val diceImage1 : ImageView = findViewById(R.id.dice_imageView_1)
+        val diceImage2 : ImageView = findViewById(R.id.dice_imageView_2)
 
 //        when (diceRoll) {
 //            1 -> diceImage.setImageResource(R.drawable.dice_1)
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 //        }
 
         // gets correct drawable based on result of roll
-        val drawableResource = when (diceRoll) {
+        val drawableResource1 = when (diceRoll1) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
@@ -44,10 +47,21 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
+        val drawableResource2 = when (diceRoll2) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+
         // updates imageview with correct drawable
-        diceImage.setImageResource(drawableResource)
+        diceImage1.setImageResource(drawableResource1)
+        diceImage2.setImageResource(drawableResource2)
         // updates imageview content description with roll result
-        diceImage.contentDescription = diceRoll.toString()
+        diceImage1.contentDescription = diceRoll1.toString()
+        diceImage2.contentDescription = diceRoll2.toString()
     }
 }
 
