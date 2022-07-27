@@ -3,7 +3,6 @@ package com.example.diceroller
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
         // imageview of dice
-        val diceImage : ImageView = findViewById(R.id.imageView)
+        val diceImage : ImageView = findViewById(R.id.dice_imageView_1)
 
 //        when (diceRoll) {
 //            1 -> diceImage.setImageResource(R.drawable.dice_1)
